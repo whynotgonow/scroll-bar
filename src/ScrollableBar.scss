@@ -1,0 +1,65 @@
+@import "../node_modules/tinper-bee-core/scss/minxin-variables";
+@import "../node_modules/tinper-bee-core/scss/minxin-mixins";
+@import "../node_modules/bee-icon/src/Icon.scss";
+
+.scrollable-bar-container {
+  box-sizing: border-box;
+  position: relative;
+  outline: none;
+  white-space: nowrap;
+  &:hover{
+    .scrollable-bar-btn{
+      display: inline-block;
+    }
+  }
+  .scrollable-bar-btn {
+      transition: all .5s;
+      display: none;
+      position: absolute;
+      cursor: pointer;
+      user-select: none;
+      height: 100%;
+      text-align: center;
+      width: 32px;
+      width: 58px;
+      background: rgba(0,0,0,0.10);
+      z-index: 10;
+      text-align: center;
+      &-prev {
+        left: 0;
+        top: 0;
+      }
+      &-next {
+        right: 0;
+        top: 0;
+      }
+      .scrollable-bar-icon{
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        width: 16px;
+        height: 24px;
+        line-height: 24px;
+        margin-top: -12px;
+        left: 50%;
+        margin-left: -8px;
+      }
+      &-disabled{
+        color: #ccc;
+        cursor: default;
+      }
+  }
+  .scrollable-bar-wrap {
+      width: 100%;
+      overflow: hidden;
+      .scrollable-bar-scroll {
+          width: 9999px;
+          .scrollable-bar-content{
+            box-sizing: border-box;
+            float: left;
+            position: relative;
+            transition: transform .5s cubic-bezier(.35,0,.25,1),-webkit-transform .5s cubic-bezier(.35,0,.25,1)
+          }
+      }
+  }
+}
