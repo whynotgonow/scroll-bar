@@ -15,8 +15,8 @@
 
 ```sh
 $ npm install -g bee-tools
-$ git clone https://github.com/tinper-bee/bee-message
-$ cd bee-message
+$ git clone https://github.com/whynotgonow/scroll-bar.git
+$ cd scroll-bar
 $ npm install
 $ npm run dev
 ```
